@@ -1,0 +1,23 @@
+{
+  "name": "void-compiler",
+  "version": "0.0.1",
+  "description": "An educational compiler & transpiler for the Void programming language built with Bun.",
+  "module": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/main.js",
+    "dev": "bun --watch src/main.js"
+  },
+  "keywords": [
+    "compiler",
+    "transpiler",
+    "ast",
+    "lexer",
+    "parser",
+    "bun",
+    "javascript",
+    "void"
+  ],
+  "author": "AhmedShah29",
+  "license": "Apache-2.0"
+}
