@@ -14,7 +14,9 @@ export const parser = tokens => {
     } 
   }
 
-  // parsers Functions
+  /* -------------------------- parsers Functions -------------------------- */
+
+  // parse var keyword
   function parseVar() {
     let dec = {
       type: "VD",
@@ -34,7 +36,8 @@ export const parser = tokens => {
   
     return dec
   }
-  
+
+  // parse val keyword
   function parseVal() {
     let dec = {
       type: "VD",
@@ -52,9 +55,10 @@ export const parser = tokens => {
     return dec
   }
 
+  // parse function keyword
   function parseFunction() {
     let fnDec = {
-      type: "fn",
+      type: "FN",
       id: "",
       args: [],
       body: []
@@ -86,13 +90,9 @@ export const parser = tokens => {
         console.error("Expected ',' or ')' sympol")
         process.exit(1)
       }
-      
     } 
 
-    
-    
     if (tokens[current] === "CP") { current++ } else { console.error("Expected ')' sympol") }
-
     if (tokens[current] === "OCB") { current++ } else { console.error("Expected '{' sympol") }
 
     while (current < tokens.length && tokens[current] !== "CCB") {
@@ -111,7 +111,7 @@ export const parser = tokens => {
     return fnDec;
   }
 
-
+  // nest parse funtion
 
 
   
