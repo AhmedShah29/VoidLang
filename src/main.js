@@ -1,5 +1,6 @@
 import { lexer } from "./lexer.js";
 import { parser } from "./parser.js";
+import { genrateCode } from "./codegen.js";
 
 const fileName = Bun.argv[2]
 
@@ -14,7 +15,10 @@ const compile = async () => {
 
     const tokens = lexer(code)
     const ast = parser(tokens)
-    console.dir(ast, { depth: null, colors: true }); // AST printing
+    const genratedCode = genrateCode(ast)
+
+    Bun.write(`./builds/${fileName.replace(".void", ".js")}`, genratedCode, { createPath: true })
+    console.log(`Successfully compiled ${fileName}`)
     
   } catch (err) {
     console.error("Error has happend during compiling", err)
