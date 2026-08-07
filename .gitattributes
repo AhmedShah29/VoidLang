@@ -1,0 +1,4 @@
+# makes .void extention makred as Other in github
+# also adds the Syntax Highlighting to .void files thru kotlin
+*.void linguist-language=Kotlin
+
