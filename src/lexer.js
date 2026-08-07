@@ -39,7 +39,7 @@ export const lexer = data => {
       continue
     }
   
-    // sympols prosses
+    // sympols process
     switch (data[i]) {
       case "{": tokens.push("OCB"); i++; break;
       case "}": tokens.push("CCB"); i++; break;
@@ -48,7 +48,7 @@ export const lexer = data => {
       case "=": tokens.push("EQUALS"); i++; break;
       case ";": tokens.push("COLAN"); i++; break;
       case ",": tokens.push("COMMA"); i++; break;
-      default: console.error(`Uknown symbol: ${data[i]}`); break;
+      default: console.error(`Uknown symbol: ${data[i]}`); process.exit(1)
     }
   }
   return tokens;
