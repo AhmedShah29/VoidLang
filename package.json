@@ -4,6 +4,9 @@
   "description": "An educational compiler & transpiler for the Void programming language built with Bun.",
   "module": "src/main.js",
   "type": "module",
+  "bin": {
+    "void": "./src/main.js"
+  },
   "scripts": {
     "start": "bun src/main.js",
     "dev": "bun --watch src/main.js"
