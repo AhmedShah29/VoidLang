@@ -12,9 +12,9 @@ This project was built from scratch to deeply understand how compilers work behi
 
 ## Features
 
-- **Custom Lexer**: Tokenizes source text into meaningful code symbols.
-- **AST Parser**: Builds a structured Abstract Syntax Tree with strict error checking.
-- > **Code Generator (Transpiler)**: Converts Void AST into clean JavaScript code. (Coming)
+ > - **Custom Lexer**: Tokenizes source text into meaningful code symbols. (in progress)
+ > - **AST Parser**: Builds a structured Abstract Syntax Tree with strict error checking. (in progress)
+ > - **Code Generator (Transpiler)**: Converts Void AST to JavaScript code. (in progress)
 
 ## Getting Started
 
@@ -23,6 +23,11 @@ This project was built from scratch to deeply understand how compilers work behi
 - [Bun](https://bun.sh/) runtime installed.
 
 ### Running a File
-
+ 
 ```bash
-bun src/main.js examples/app.void
+void examples/app.void
+```
+> or ```bun src/main.js examples/app.void```
+
+# Current Syntax
+Void supports mutable variables (var), immutable constants (val), string and integer data types, and function declarations.
