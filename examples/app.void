@@ -1,4 +1,4 @@
 fn MakeSomeOne( name, age ) {
-  var Name = someone
+  var Name = "someone"
   val age = 30
 }
