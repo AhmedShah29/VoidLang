@@ -1,4 +1,8 @@
-fn MakeSomeOne( name, age ) {
-  var Name = "someone"
-  val age = 30
+# comment 
+
+fn MakeSomeOne() {
+    while (1 > 0) {
+        var Name = "someone"
+        val age = 30
+    }
 }
