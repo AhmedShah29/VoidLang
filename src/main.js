@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { lexer } from "./lexer.js";
-import { parser } from "./parser.js";
+import { parser } from "./Parser/parser.js";
 import { genrateCode } from "./codegen.js";
 import { resolve, basename } from "path"
 

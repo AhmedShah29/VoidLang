@@ -4,9 +4,12 @@ export const lexer = data => {
 
   while (i < data.length) {
 
+    // comments skip
+    if (data[i] === "#") { while (i < data.length && data[i] !== '\n') { i++ } continue }
+    
     // skips spaces/newlines
     if (data[i] === " " || data[i] === "\n" || data[i] === "\r") { i++; continue }
-
+    
     // complates the word
     if (/[a-zA-Z]/.test(data[i])) {
       let word = ""
@@ -84,9 +87,8 @@ export const lexer = data => {
       case ")": tokens.push("CP"); i++; break;
       case "<": tokens.push("L_THAN"); i++; break;
       case ">": tokens.push("B_THAN"); i++; break;
-      //case "=": tokens.push("EQUALS"); i++; break;
-      case ";": tokens.push("SEMICOLAN"); i++; break;
-      case ":": tokens.push("COLAN"); i++; break; 
+      case ";": tokens.push("SEMICOLON"); i++; break;
+      case ":": tokens.push("COLON"); i++; break; 
       case ",": tokens.push("COMMA"); i++; break;
       default: console.error(`Uknown symbol: ${data[i]}`); process.exit(1)
     }
