@@ -6,7 +6,7 @@ export const genrateCode = node => {
     switch (node.body[i].type) {
       case "VD": output += variableGen(node.body[i]) + '\n'; break;
       case "FN": output += functionGen(node.body[i]) + '\n'; break;
-      case "WD": output += whileGen(node.body[i]) + '\n'; break
+      case "WD": output += whileGen(node.body[i]) + '\n'; break;
     }
   }
   return output
@@ -49,6 +49,6 @@ const whileGen = node => {
       .map(ln => ln.trim() !== "" ? `  ${ln}` : '')
       .join("\n")
     
-    return `while (${leftCon} ${operator} ${rightCon}) {\n${whileBody}\n}`
+    return `while (${leftCon} ${operator} ${rightCon}) {\n${whileBody}}`
   }
 }
