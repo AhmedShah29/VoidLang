@@ -1,33 +1,38 @@
-![License](https://img.shields.io/badge/License-Apache_2.0-black?style=for-the-badge&labelColor=000000&color=white)
-![Void Compiler](https://img.shields.io/badge/Void-Compiler-black?style=for-the-badge&labelColor=000000&color=white)
-![Bun](https://img.shields.io/badge/Runtime-Bun-black?style=for-the-badge&logo=bun&logoColor=white)
+<div align="center">
+  <h1>Void</h1>
+  <h3>A programming language that stays out of your way.</h3>
+  
+  <img src="https://img.shields.io/badge/License-Apache_2.0-000000?style=flat-square&labelColor=000000&color=white" alt="License" />
+  <img src="https://img.shields.io/badge/Status-Early_Dev-000000?style=flat-square&labelColor=000000&color=white" alt="Status" />
+  <img src="https://img.shields.io/badge/Written_In-C-000000?style=flat-square&labelColor=000000&color=white" alt="Language" />
+  <img src="https://img.shields.io/badge/Backend-C_/_LLVM-000000?style=flat-square&labelColor=000000&color=white" alt="Backend" />
+  <img src="https://img.shields.io/badge/Extension-.vi-000000?style=flat-square&labelColor=000000&color=white" alt="Extension" />
+</div>
 
-# Void Programming Language Compiler
 
-An educational compiler and transpiler for **Void** (a custom programming language) written in JavaScript using the **Bun** runtime.
+---
 
-## Project Purpose
+## About
 
-This project was built from scratch to deeply understand how compilers work behind the scenes — from lexical analysis (Lexer) and abstract syntax tree construction (AST Parsing) to code generation (Transpiling to JavaScript).
+Void is a programming language that compiles to **C**, and eventually to **LLVM IR**. Built with explicit semantics and clean syntax.
 
-## Features
+---
 
- > - **Custom Lexer**: Tokenizes source text into meaningful code symbols. (in progress)
- > - **AST Parser**: Builds a structured Abstract Syntax Tree with strict error checking. (in progress)
- > - **Code Generator (Transpiler)**: Converts Void AST to JavaScript code. (in progress)
+## Documentation
 
-## Getting Started
+The complete language syntax reference is available in [`Syntax.md`](https://github.com/AhmedShah29/VoidLang/docs/Syntax.md).
 
-### Requirements
+---
 
-- [Bun](https://bun.sh/) runtime installed.
+## Current Status
 
-### Running a File
- 
-```bash
-void examples/app.void
-```
-> or ```bun src/main.js examples/app.void```
+| Component | Status |
+|-----------|--------|
+| **Lexer** | ✅ Complete |
+| **Parser** | 🔴 In Progress |
+| **Sema** | 🔴 Planned |
+| **Codegen (C)** | 🔴 Planned |
+| **Codegen (LLVM IR)** | 🔴 Planned |
+| **Standard Library** | 🔴 Planned |
 
-# Current Syntax
-Void supports mutable variables (var), immutable constants (val), string and integer data types, and function declarations.
+---
