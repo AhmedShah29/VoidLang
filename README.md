@@ -20,7 +20,7 @@ Void is a programming language that compiles to **C**, and eventually to **LLVM 
 
 ## Documentation
 
-The complete language syntax reference is available in [`Syntax.md`](https://github.com/AhmedShah29/VoidLang/docs/Syntax.md).
+The complete language syntax reference is available in [`Syntax.md`](https://github.com/AhmedShah29/VoidLang/blob/main/docs/Syntax.md).
 
 ---
 
